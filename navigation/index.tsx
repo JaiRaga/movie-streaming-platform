@@ -23,7 +23,7 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ComingSoonScreen from '../screens/ComingSoonScreen';
 import DownloadsScreen from '../screens/DownloadsScreen';
-import HomeScreen from '../screens/HomeScreen';
+import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import SearchScreen from '../screens/SearchScreen';
