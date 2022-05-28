@@ -34,6 +34,7 @@ export type RootTabParamList = {
 
 export type BottomTabStackParamList = {
   HomeScreen: undefined;
+  MovieDetailsScreen: undefined;
   ComingSoonScreen: undefined;
   SearchScreen: undefined;
   DownloadsScreen: undefined;
