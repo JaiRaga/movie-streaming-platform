@@ -8,6 +8,7 @@ import {
   AntDesign,
   MaterialIcons,
   Ionicons,
+  Octicons,
 } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
@@ -25,6 +26,7 @@ import ComingSoonScreen from '../screens/ComingSoonScreen';
 import DownloadsScreen from '../screens/DownloadsScreen';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import ModalScreen from '../screens/ModalScreen';
+import MovieDetailsScreen from '../screens/MovieDetailsScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import SearchScreen from '../screens/SearchScreen';
 import {
@@ -81,6 +83,13 @@ const HomeStack = createNativeStackNavigator<BottomTabStackParamList>();
 const HomeStackNavigator = () => {
   return (
     <HomeStack.Navigator>
+       <HomeStack.Screen
+        name="MovieDetailsScreen"
+        component={MovieDetailsScreen}
+        options={{ 
+          title: '',
+         }}
+      />
       <HomeStack.Screen
         name="HomeScreen"
         component={HomeScreen}
@@ -188,7 +197,7 @@ function BottomTabNavigator() {
           title: 'Downloads',
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <AntDesignIcon name="download" color={color} />
+            <OcticonsIcon name="download" color={color} />
           ),
         }}
       />
@@ -219,4 +228,11 @@ function IoniconsIcon(props: {
   color: string;
 }) {
   return <Ionicons size={24} style={{ marginBottom: -3 }} {...props} />;
+}
+
+function OcticonsIcon(props: {
+  name: React.ComponentProps<typeof Octicons>['name'];
+  color: string;
+}) {
+  return <Octicons size={24} style={{ marginBottom: -3 }} {...props} />;
 }
