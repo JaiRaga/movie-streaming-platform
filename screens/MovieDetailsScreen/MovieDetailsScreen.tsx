@@ -32,7 +32,7 @@ const MovieDetailsScreen = () => {
 
       <FlatList
         data={currentSeason.episodes.items}
-        renderItem={({ item }) => <EpisodeItem episode={item} />}
+        renderItem={({ item }) => <EpisodeItem episode={item} onPress={setCurrentEpisode} />}
         style={{ marginBottom: 250 }}
         ListHeaderComponent={
           <View>
