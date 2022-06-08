@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     resizeMode: 'cover'
   },
   details:{
-    padding: 12
+    padding: 12,
   },
   title: {
     fontSize: 24,
@@ -65,6 +65,25 @@ const styles = StyleSheet.create({
   },
   downloadIcon: {
     marginRight: 5
+  },
+  plot: {
+    marginVertical: 10
+  },
+  iconRow: {
+    flexDirection: 'row',
+    marginTop: 20
+  },
+  plusIcon: {
+    alignItems: 'center',
+    marginHorizontal: 26
+  },
+  iconText: {
+    color: 'grey',
+    marginTop: 5
+  },
+  picker: {
+    color: 'white',
+    width: 130
   }
 })
 
