@@ -2,18 +2,12 @@ import React from 'react';
 import { Image } from 'react-native';
 import { Octicons } from '@expo/vector-icons';
 import { View, Text } from '../../components/Themed';
+import { Episode } from '../../types';
 
 import styles from './styles';
 
 interface EpisodeItemProps {
-  episode: {
-    id: string;
-    title: string;
-    poster: string;
-    duration: string;
-    plot: string;
-    video: string;
-  };
+  episode: Episode;
 }
 
 const EpisodeItem = (props: EpisodeItemProps) => {
