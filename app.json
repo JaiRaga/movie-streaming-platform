@@ -3,7 +3,7 @@
     "name": "movie-streaming-platform",
     "slug": "movie-streaming-platform",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "dark",
