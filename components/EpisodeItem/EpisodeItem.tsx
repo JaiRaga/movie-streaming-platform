@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, Pressable } from 'react-native';
 import { Octicons } from '@expo/vector-icons';
 import { View, Text } from '../../components/Themed';
 import { Episode } from '../../types';
@@ -8,12 +8,13 @@ import styles from './styles';
 
 interface EpisodeItemProps {
   episode: Episode;
+  onPress: (episode: Episode) => void
 }
 
 const EpisodeItem = (props: EpisodeItemProps) => {
-  const { episode } = props;
+  const { episode, onPress } = props;
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={() => onPress(episode)}>
       <View style={styles.row}>
         <Image style={styles.image} source={{ uri: episode.poster }} />
 
@@ -26,7 +27,7 @@ const EpisodeItem = (props: EpisodeItemProps) => {
       </View>
 
       <Text style={styles.plot}>{episode.plot}</Text>
-    </View>
+    </Pressable>
   );
 };
 
